@@ -105,43 +105,79 @@
 
 //Prototype
 
-function Person(firstName, lastName, dob){
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.birthday = new Date(dob);
-    // this.claculateAge = function(){
-    //     const diff = Date.now()-this.birthday.getTime();
-    //     const ageDate = new Date(diff);
-    //     return Math.abs(ageDate.getUTCFullYear()- 1970);
-    // }
-}
+// function Person(firstName, lastName, dob){
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.birthday = new Date(dob);
+//     // this.claculateAge = function(){
+//     //     const diff = Date.now()-this.birthday.getTime();
+//     //     const ageDate = new Date(diff);
+//     //     return Math.abs(ageDate.getUTCFullYear()- 1970);
+//     // }
+// }
 
-//Calculate Age Function in Prototype
-Person.prototype.claculateAge = function(){
-    const diff = Date.now()-this.birthday.getTime();
-    const ageDate = new Date(diff);
-    return Math.abs(ageDate.getUTCFullYear()- 1970);
-}
-//Get Full Name Function In Prototype
-Person.prototype.fullName = function(){
-    return `${this.firstName} ${this.lastName}`;
-}
-//Get Married Function In prototype
-Person.prototype.getMarried = function(newLastName){
-   this.lastName= newLastName;
-}
+// //Calculate Age Function in Prototype
+// Person.prototype.claculateAge = function(){
+//     const diff = Date.now()-this.birthday.getTime();
+//     const ageDate = new Date(diff);
+//     return Math.abs(ageDate.getUTCFullYear()- 1970);
+// }
+// //Get Full Name Function In Prototype
+// Person.prototype.fullName = function(){
+//     return `${this.firstName} ${this.lastName}`;
+// }
+// //Get Married Function In prototype
+// Person.prototype.getMarried = function(newLastName){
+//    this.lastName= newLastName;
+// }
 
-const martha = new Person('Martha','Neilsen','12-9-1986');
-const jonas = new Person('Jonas','Kahnwald','7-27-1986');
+// const martha = new Person('Martha','Neilsen','12-9-1986');
+// const jonas = new Person('Jonas','Kahnwald','7-27-1986');
 
-// console.log(john.claculateAge());
-// // console.log(john.firstName);
-// console.log(jonas.claculateAge());
-// console.log(jonas.fullName());
+// // console.log(john.claculateAge());
+// // // console.log(john.firstName);
+// // console.log(jonas.claculateAge());
+// // console.log(jonas.fullName());
 
-//Assigning get married function
-martha.getMarried('Kahnwald');
+// //Assigning get married function
+// martha.getMarried('Kahnwald');
 
-// console.log(martha.fullName());
+// // console.log(martha.fullName());
 
-// console.log(jonas.hasOwnProperty('firstName'));
+// // console.log(jonas.hasOwnProperty('firstName'));
+
+// function Person(firstName, lastName){
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+// }
+
+// //greetings function
+// Person.prototype.greetings = function(){
+//     return `Hello! There ${this.firstName} ${this.lastName}.`;
+// }
+
+// const user1 = new Person('Jonas', 'Kahnwald');
+
+// console.log(user1.greetings());
+
+// //Coustomer Constructor
+
+// function Coustomer (fName, lName, phone, membership){
+//     Person.call(this, fName, lName);
+//     this.phone = phone;
+//     this.membership = membership;
+// }
+// //Inherit the person prototype methods
+// Coustomer.prototype = Object.create(Person.prototype)
+// Coustomer.prototype.constructor = Coustomer;
+
+// //Change Coustomer Greetings
+// Coustomer.prototype.greetings = function(){
+//     return `Hello There ${this.firstName} ${this.lastName}. We are glad to have you.`
+// }
+
+// const coustomer1 = new Coustomer('Agnes','Neilsen','9800765686','Standered');
+
+// console.log(coustomer1);
+
+// console.log(coustomer1.greetings());
