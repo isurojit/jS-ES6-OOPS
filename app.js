@@ -33,3 +33,72 @@
 // console.log(surojit);
 // console.log(surojit.calculateAge());
 
+//Other constructors
+
+//String constructor
+
+// const name1 = "surojit";
+// const name2 = new String('Surojit');
+
+// //name2.foo = "Manna";
+// console.log(name1);
+// console.log(name2);
+// console.log(typeof name1);
+// console.log(typeof name2);
+
+//Number Constructor
+
+// const num1 = 5;
+// const num2 = new Number(5);
+
+// console.log(num1);
+// console.log(typeof num2);
+
+//Boolean Construcctor
+
+// const boo1 = true;
+// const boo2 = new Boolean(false)
+
+// console.log(boo1);
+// console.log(boo2);
+
+//Function
+
+// const getSum1 = function(x, y){
+//     return x + y;
+// }
+
+// const getSum2 = new Function('x','y','return x+y')
+
+// console.log(getSum1(5, 6));
+// console.log(getSum2(5, 6));
+
+//Object
+
+// const obj1 = {
+//     firstName: 'Surojit',
+//     lastName: 'Manna'
+// }
+
+// const obj2 = new Object({
+//     firstName: 'Surojit',
+//     lastName: 'Manna'
+// });
+// console.log(obj1);
+// console.log(obj2);
+
+//Arrays
+
+// const arr1 = [1,2,3,4,5,6,7,8,9,0];
+// const arr2 = new Array(1,2,3,4,5,6,7,8,9,0)
+
+// console.log(arr1);
+// console.log(arr2);
+
+//Regular Expression
+
+// const re1 = /\w+/;
+// const re2 = new RegExp('\\w+');
+
+// console.log(re1);
+// console.log(re2);
