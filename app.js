@@ -102,3 +102,46 @@
 
 // console.log(re1);
 // console.log(re2);
+
+//Prototype
+
+function Person(firstName, lastName, dob){
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.birthday = new Date(dob);
+    // this.claculateAge = function(){
+    //     const diff = Date.now()-this.birthday.getTime();
+    //     const ageDate = new Date(diff);
+    //     return Math.abs(ageDate.getUTCFullYear()- 1970);
+    // }
+}
+
+//Calculate Age Function in Prototype
+Person.prototype.claculateAge = function(){
+    const diff = Date.now()-this.birthday.getTime();
+    const ageDate = new Date(diff);
+    return Math.abs(ageDate.getUTCFullYear()- 1970);
+}
+//Get Full Name Function In Prototype
+Person.prototype.fullName = function(){
+    return `${this.firstName} ${this.lastName}`;
+}
+//Get Married Function In prototype
+Person.prototype.getMarried = function(newLastName){
+   this.lastName= newLastName;
+}
+
+const martha = new Person('Martha','Neilsen','12-9-1986');
+const jonas = new Person('Jonas','Kahnwald','7-27-1986');
+
+// console.log(john.claculateAge());
+// // console.log(john.firstName);
+// console.log(jonas.claculateAge());
+// console.log(jonas.fullName());
+
+//Assigning get married function
+martha.getMarried('Kahnwald');
+
+// console.log(martha.fullName());
+
+// console.log(jonas.hasOwnProperty('firstName'));
