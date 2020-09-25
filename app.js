@@ -181,3 +181,36 @@
 // console.log(coustomer1);
 
 // console.log(coustomer1.greetings());
+
+//create.object
+
+const personPrototype ={
+    greetings: function(){
+        return `Hi there ${this.firstName} ${this.lastName}.`;
+    },
+    getMarried: function(newLastName){
+        this.lastName = newLastName;
+    } 
+}
+
+const user1 = Object.create(personPrototype);
+
+user1.firstName = 'Martha';
+user1.lastName = 'Neilsen';
+user1.age = 28;
+user1.getMarried('Kahdwal')
+
+console.log(user1.greetings());
+
+//another method
+const user2 = Object.create(personPrototype, {
+    firstName: {value: 'Agnes'},
+    lastName: {value: 'Nielsen'},
+    age: {value: 30}
+});
+
+console.log(user2);
+
+user2.getMarried('Tauber');
+
+console.log(user2);
