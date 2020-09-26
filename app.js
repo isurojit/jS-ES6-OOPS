@@ -254,3 +254,33 @@
 // console.log(martha.greeting());
 
 // console.log(Person.addNumbers(455,678));
+
+//Es6 sub calss
+
+class Person{
+    constructor(firstName, lastName){
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    greetings(){
+        return `Hi there ${this.firstName} ${this.lastName}`
+    }
+}
+
+class Coustomer extends Person{
+    constructor(firstName, lastName, phoneNumber, membership){
+        super(firstName, lastName);
+        this.phoneNumber = phoneNumber;
+        this.membership = membership;
+    }
+
+    static getMembershipCost(){
+        return 500;
+    }
+}
+
+const jonas = new Coustomer('Jonas','Kahndwal','1234567890','premium');
+
+console.log(jonas.greetings());
+console.log(Coustomer.getMembershipCost());
