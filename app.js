@@ -184,33 +184,73 @@
 
 //create.object
 
-const personPrototype ={
-    greetings: function(){
-        return `Hi there ${this.firstName} ${this.lastName}.`;
-    },
-    getMarried: function(newLastName){
-        this.lastName = newLastName;
-    } 
-}
+// const personPrototype ={
+//     greetings: function(){
+//         return `Hi there ${this.firstName} ${this.lastName}.`;
+//     },
+//     getMarried: function(newLastName){
+//         this.lastName = newLastName;
+//     } 
+// }
 
-const user1 = Object.create(personPrototype);
+// const user1 = Object.create(personPrototype);
 
-user1.firstName = 'Martha';
-user1.lastName = 'Neilsen';
-user1.age = 28;
-user1.getMarried('Kahdwal')
+// user1.firstName = 'Martha';
+// user1.lastName = 'Neilsen';
+// user1.age = 28;
+// user1.getMarried('Kahdwal')
 
-console.log(user1.greetings());
+// console.log(user1.greetings());
 
-//another method
-const user2 = Object.create(personPrototype, {
-    firstName: {value: 'Agnes'},
-    lastName: {value: 'Nielsen'},
-    age: {value: 30}
-});
+// //another method
+// const user2 = Object.create(personPrototype, {
+//     firstName: {value: 'Agnes'},
+//     lastName: {value: 'Nielsen'},
+//     age: {value: 30}
+// });
 
-console.log(user2);
+// console.log(user2);
 
-user2.getMarried('Tauber');
+// user2.getMarried('Tauber');
 
-console.log(user2);
+// console.log(user2);
+
+//Es6 Classes
+
+// class Person {
+//     constructor(firstName, lastName, dob){
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//         this.birthday = new Date(dob);
+//     }
+
+//     greeting(){
+//         return `Hello There! ${this.firstName} ${this.lastName}`
+//     }
+
+//     calculateAge(){
+//         const diff = Date.now() - this.birthday.getTime();
+//         const getDate = new Date(diff);
+//         return (Math.abs(getDate.getUTCFullYear() -1970)); 
+//         }
+    
+//     getMarried(newLastName){
+//         this.lastName = newLastName;
+//     }
+
+//     static addNumbers(x, y){
+//         return x+y;
+//     }
+// }
+
+// const jonas = new Person('Jonas','Kahndwal','7-27-1984');
+// const martha = new Person('Martha', 'Neilsen', '12-7-1984');
+// martha.getMarried('Kahndwal');
+
+// // console.log(jonas.greeting());
+// console.log(jonas.calculateAge());
+// console.log(jonas);
+
+// console.log(martha.greeting());
+
+// console.log(Person.addNumbers(455,678));
